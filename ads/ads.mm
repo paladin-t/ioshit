@@ -1,9 +1,8 @@
 #include "ads.h"
-#include "util/RichMisc.h"
+#include "iAdHelper.h"
 #include <Foundation/Foundation.h>
 #include <UIKit/UIKit.h>
-#   include <StartApp/StartApp.h>
-#   include "iAdHelper.h"
+#include <StartApp/StartApp.h>
 
 static STAStartAppAd* startAppAd = NULL;
 
