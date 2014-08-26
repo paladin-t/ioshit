@@ -11,6 +11,8 @@ struct Native {
 
     static bool networkConnected(void);
 
+    static void openUrl(const char* url);
+
     static void msgBox(const char* title, const char* message);
 
     static void askBox(const char* title, const char* message, const char* btnYes, const char* btnNo, AnsweredFunc onAnsweredYes, AnsweredFunc onAnsweredNo);

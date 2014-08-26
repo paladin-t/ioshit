@@ -3,7 +3,7 @@
 
 #if TARGET_TYPE == TARGET_NORMAL
 
-@interface iAdHelper()<ADBannerViewDelegate>
+@interface iAdHelper() <ADBannerViewDelegate>
 
 @end
 
@@ -26,7 +26,7 @@
 - (void) layoutAnimated: (BOOL) animated {
     // As of iOS 6.0, the banner will automatically resize itself based on its width.
     // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
-    rich::Size contentFrame = rich::Director::sharedDirector()->getWinSize();//getOpenGLView()->getFrameSize();
+    rich::Size contentFrame = rich::Director::instance()->getWinSize();//getOpenGLView()->getFrameSize();
 
     if (contentFrame.x < contentFrame.y)
         _bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
@@ -51,7 +51,7 @@
 - (void) bannerViewDidLoadAd: (ADBannerView*) banner {
     [self layoutAnimated: YES];
 
-    //Size contentFrame = Director::sharedDirector()->getWinSize();
+    //Size contentFrame = Director::instance()->getWinSize();
     CGRect r = CGRectMake(
         0,
         0,//contentFrame.height - banner.frame.size.height,
@@ -76,7 +76,7 @@
 
     _bannerView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
     
-    rich::Size contentFrame = rich::Director::sharedDirector()->getWinSize();//getOpenGLView()->getFrameSize();
+    rich::Size contentFrame = rich::Director::instance()->getWinSize();//getOpenGLView()->getFrameSize();
     if (contentFrame.x < contentFrame.y) {
         _bannerView.requiredContentSizeIdentifiers = [NSSet setWithObject: ADBannerContentSizeIdentifierPortrait];
         _bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
@@ -93,7 +93,7 @@
     [topView addSubview: _bannerView];
     _bannerView.delegate = self;
 
-    //[[[Director sharedDirector]view]bringSubviewToFront:_bannerView];
+    //[[[Director instance]view]bringSubviewToFront:_bannerView];
 
     [self layoutAnimated: YES];
 }

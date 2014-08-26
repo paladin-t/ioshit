@@ -77,6 +77,15 @@ bool Native::networkConnected(void) {
     return internetStatus != NotReachable;
 }
 
+void Native::openUrl(const char* url) {
+    if (!url)
+        return;
+
+    NSString* theUrl = [NSString stringWithUTF8String: url];
+
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString: theUrl]];
+}
+
 void Native::msgBox(const char* title, const char* message) {
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle: [NSString stringWithUTF8String: title]
                                                     message: [NSString stringWithUTF8String: message]
