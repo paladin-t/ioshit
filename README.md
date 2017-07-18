@@ -1,7 +1,7 @@
-IOSHIT (ios hit/io shit)
-------------
+# IOSHIT (ios hit/io shit)
 
-###Introduction
+### Introduction
+
 IOSHIT is a library which encapsuled some useful iOS functionallity together for
 C++ programmers. Now including:
 
@@ -17,13 +17,15 @@ C++ programmers. Now including:
 * [share]      Sharing via SNS.
 * [store]      IAP support.
 
-###How to Use
+### How to Use
+
 1. Simply integrate modules you need into your project.
 2. Call XXX::open() to initialize a module.
 3. Call setDevId("XXX")/setAppId("YYY") if needed.
 4. Write your invocation.
 5. Call XXX::close() to dispose a module.
 
-###TODO
+### TODO
+
 Polish documents.
 More useful modules?
