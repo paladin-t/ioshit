@@ -1,8 +1,8 @@
-# IOSHIT (ios hit/io shit)
+# iOS Hit
 
 ### Introduction
 
-IOSHIT is a library which encapsuled some useful iOS functionallity together for
+iOSHit is a library that encapsules some useful iOS functionallity together for
 C++ programmers. Now including:
 
 * [ads]        App banner support. iAdHelper is an optional helper class for
@@ -27,5 +27,6 @@ C++ programmers. Now including:
 
 ### TODO
 
-Polish documents.
-More useful modules?
+Polishing documents.
+
+Adding more useful modules?
